@@ -76,3 +76,28 @@ const products = [
     ],
   },
 ];
+
+const sliderWrapper = document.querySelector('.sliderWrapper');
+const slides = document.querySelectorAll('.sliderItem');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+let currentIndex = 0;
+
+const showSlide = (index) => {
+    const slideWidth = slides[0].clientWidth;
+    sliderWrapper.style.transform = `translateX(${-index * slideWidth}px)`;
+};
+
+const nextSlide = () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+};
+
+const prevSlide = () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+};
+
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+setInterval(nextSlide, 3000);

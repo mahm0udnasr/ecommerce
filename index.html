@@ -4,14 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="style.css" as="style">
     <title>Nike Store</title>
+    <meta name="description" content="E-commerce Shoes website, this site coded by @_mahm0udnasr">
 </head>
 <body>
-    
-    <script src="./app.js"></script>
+    <!-- solve a accability problem -->
+    <a href="#main-content" style="visibility: hidden; position: fixed;"">Skip to main content</a>
+    <!-- Navbar -->
+    <!-- TODO:
+        Add A Shoping cart icon + popup for add to cart product
+    -->
+    <nav aria-label="Main Navigation">
+        <div class="navTop">
+            <div class="navItem">
+                <img src="./img/sneakers.webp" loading="lazy" alt="e-commerce app logo">
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput" value="">
+                    <i class="searchIcon fa-solid fa-magnifying-glass" style="width: 20px; height: 20px;"></i>
+                </div>
+            </div>
+            <div class="navItem">
+                <span class="limitedOffer">Limited offer!</span>
+            </div>
+        </div>
+    </nav>
+    <!-- Banner Slider -->
+    <!-- TODO:
+        Change The Shoes Img & alt desc
+    -->
+    <div class="slider">
+        <button class="prev" aria-label="Previous Slide">
+            <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img src="./img/air.webp" loading="lazy" alt="Shoes AIR FORCE" class="sliderImg">
+                <div class="sliderDetails">
+                    <h1 class="sliderTitle">AIR FORCE <br>NEW <br>SEASON</h1>
+                    <h2 class="sliderPrice">119$</h2>
+                    <a href="#product" aria-label="buyButton">
+                        <button class="buyButton">BUY NOW!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/jordan.webp" loading="lazy" alt="shoes AIR JORDAN" class="sliderImg">
+                <div class="sliderDetails">
+                    <h1 class="sliderTitle">AIR JORDAN</br> NEW</br> SEASON</h1>
+                    <h2 class="sliderPrice">$149</h2>
+                    <a href="#product" aria-label="buyButton">
+                        <button class="buyButton">BUY NOW!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/blazer.webp" loading="lazy" alt="shoes BLAZER" class="sliderImg">
+                <div class="sliderDetails">
+                    <h1 class="sliderTitle">BLAZER</br> NEW</br> SEASON</h1>
+                    <h2 class="sliderPrice">$109</h2>
+                    <a href="#product" aria-label="buyButton">
+                        <button class="buyButton">BUY NOW!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/crater.webp" loading="lazy" alt="shoes CRATER" class="sliderImg">
+                <div class="sliderDetails">
+                    <h1 class="sliderTitle">CRATER</br> NEW</br> SEASON</h1>
+                    <h2 class="sliderPrice">$129</h2>
+                    <a href="#product" aria-label="buyButton">
+                        <button class="buyButton">BUY NOW!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/hippie.webp" loading="lazy" alt="shoes HIPPIE" class="sliderImg">
+                <div class="sliderDetails">
+                    <h1 class="sliderTitle">HIPPIE</br> NEW</br> SEASON</h1>
+                    <h2 class="sliderPrice">$99</h2>
+                    <a href="#product" aria-label="buyButton">
+                        <button class="buyButton">BUY NOW!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="next" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature">
+            <img src="./img/shipping.webp" alt="dlevery Shipping icon" class="featureIcon">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDesc">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature">
+            <img src="./img/return.webp" alt="Return Order Icon" class="featureIcon">
+            <span class="featureTitle">30 DAYS RETURN</span>
+            <span class="featureDesc">No question return and easy refund in 14 days.</span>
+        </div>
+        <div class="feature">
+            <img src="./img/gift.webp" alt="Free Gift Icon" class="featureIcon">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesc">Buy gift cards and use coupon codes easily.</span>
+        </div>
+        <div class="feature">
+            <img src="./img/contact.webp" alt="Fast Contcat Icon" class="featureIcon">
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureDesc">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+    <!-- Products Section -->
+    <div class="products">
+        <div class="product">
+            <div class="productImg"></div>
+            <div class="productDeatials">
+                <div class="productTitle"></div>
+                <div class="productPrice"></div>
+                <div class="buyButton"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Section -->
+    <!-- Footer Section -->
+    <script src="./app.js" async></script>
 </body>
 </html>
