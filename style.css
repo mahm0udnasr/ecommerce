@@ -316,10 +316,6 @@ hr {
 ****************/
 .gallery {
   background-color: #1d1e1e;
-  background-image: url("./img/bg-1.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   height: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
