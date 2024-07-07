@@ -15,29 +15,17 @@
     <!-- solve a accability problem -->
     <a href="#main-content" style="visibility: hidden; position: fixed;"">Skip to main content</a>
     <!-- Navbar -->
-    <!-- TODO:
-        Add A Shoping cart icon + popup for add to cart product
-    -->
     <nav aria-label="Main Navigation">
         <div class="navTop">
-            <div class="navItem">
+            <a class="navItem" href="#">
                 <img src="./img/sneakers.webp" loading="lazy" alt="e-commerce app logo">
-            </div>
+            </a>
             <div class="navItem">
-                <div class="search">
-                    <input type="text" placeholder="Search..." class="searchInput" value="">
-                    <i class="searchIcon fa-solid fa-magnifying-glass" style="width: 20px; height: 20px;"></i>
-                </div>
-            </div>
-            <div class="navItem">
-                <span class="limitedOffer">Limited offer!</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
             </div>
         </div>
     </nav>
     <!-- Banner Slider -->
-    <!-- TODO:
-        Change The Shoes Img & alt desc
-    -->
     <div class="slider">
         <button class="prev" aria-label="Previous Slide">
             <i class="fa-solid fa-angle-left"></i>
@@ -48,7 +36,7 @@
                 <div class="sliderDetails">
                     <h1 class="sliderTitle">AIR FORCE <br>NEW <br>SEASON</h1>
                     <h2 class="sliderPrice">119$</h2>
-                    <a href="#product" aria-label="buyButton">
+                    <a href="#products" aria-label="buyButton">
                         <button class="buyButton">BUY NOW!</button>
                     </a>
                 </div>
@@ -58,7 +46,7 @@
                 <div class="sliderDetails">
                     <h1 class="sliderTitle">AIR JORDAN</br> NEW</br> SEASON</h1>
                     <h2 class="sliderPrice">$149</h2>
-                    <a href="#product" aria-label="buyButton">
+                    <a href="#products" aria-label="buyButton">
                         <button class="buyButton">BUY NOW!</button>
                     </a>
                 </div>
@@ -68,7 +56,7 @@
                 <div class="sliderDetails">
                     <h1 class="sliderTitle">BLAZER</br> NEW</br> SEASON</h1>
                     <h2 class="sliderPrice">$109</h2>
-                    <a href="#product" aria-label="buyButton">
+                    <a href="#products" aria-label="buyButton">
                         <button class="buyButton">BUY NOW!</button>
                     </a>
                 </div>
@@ -78,7 +66,7 @@
                 <div class="sliderDetails">
                     <h1 class="sliderTitle">CRATER</br> NEW</br> SEASON</h1>
                     <h2 class="sliderPrice">$129</h2>
-                    <a href="#product" aria-label="buyButton">
+                    <a href="#products" aria-label="buyButton">
                         <button class="buyButton">BUY NOW!</button>
                     </a>
                 </div>
@@ -88,7 +76,7 @@
                 <div class="sliderDetails">
                     <h1 class="sliderTitle">HIPPIE</br> NEW</br> SEASON</h1>
                     <h2 class="sliderPrice">$99</h2>
-                    <a href="#product" aria-label="buyButton">
+                    <a href="#products" aria-label="buyButton">
                         <button class="buyButton">BUY NOW!</button>
                     </a>
                 </div>
@@ -122,18 +110,178 @@
         </div>
     </div>
     <!-- Products Section -->
-    <div class="products">
-        <div class="product">
-            <div class="productImg"></div>
-            <div class="productDeatials">
-                <div class="productTitle"></div>
-                <div class="productPrice"></div>
-                <div class="buyButton"></div>
+    <div class="AllProductSection">
+        <!-- Search -->
+        <div class="search" id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+        </div>
+        <div class="products" id="products">
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike Air Max" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike Air Max</div>
+                        <div class="productPrice">$129</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
             </div>
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike Revolution" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike Revolution</div>
+                        <div class="productPrice">$89</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike Downshifter" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike Downshifter</div>
+                        <div class="productPrice">$79</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike Tanjun" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike Tanjun</div>
+                        <div class="productPrice">$99</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike Zoom Winflo" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike Zoom Winflo</div>
+                        <div class="productPrice">$139</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike Pegasus Trail" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike Pegasus Trail</div>
+                        <div class="productPrice">$149</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike React Infinity Run" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike React Infinity Run</div>
+                        <div class="productPrice">$159</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike Air Zoom Terra" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike Air Zoom Terra</div>
+                        <div class="productPrice">$169</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+            <!-- <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike Vaporfly" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike Vaporfly</div>
+                        <div class="productPrice">$199</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike ZoomX" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike ZoomX</div>
+                        <div class="productPrice">$189</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike Court Vision" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike Court Vision</div>
+                        <div class="productPrice">$89</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div>
+            <div class="product">
+                <div class="containerImg">
+                    <img class="productImg" loading="lazy" alt="Nike SB Dunk" src="https://via.placeholder.com/150">
+                </div>
+                <hr>
+                <div class="productDeatials">
+                    <div class="deatials">
+                        <div class="productTitle">Nike SB Dunk</div>
+                        <div class="productPrice">$149</div>
+                    </div>
+                    <i class="addCart fa-solid fa-cart-plus"></i>
+                </div>
+            </div> -->
         </div>
     </div>
     <!-- Gallery Section -->
+    <div class="gallery">
+
+    </div>
     <!-- Footer Section -->
+    <div class="footer">
+
+    </div>
     <script src="./app.js" async></script>
 </body>
 </html>
