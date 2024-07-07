@@ -19,6 +19,13 @@ html {
 nav {
   background-color: #111;
   color: #fff;
+  
+}
+nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999999999999;
 }
 
 .navTop {
@@ -187,13 +194,8 @@ nav {
 /****************
     PRODUCTS
 ****************/
-
 .AllProductSection {
   background-color: #181818;
-  background-image: url("./img/bg-1.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,7 +209,7 @@ nav {
   z-index: 9999;
   width: 350px;
   height: 60px;
-  background-color: #161717;
+  background-color: #1d1e1e;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -313,11 +315,170 @@ hr {
     GALLERY
 ****************/
 .gallery {
-  background: #1d1e1e;
+  background-color: #1d1e1e;
+  background-image: url("./img/bg-1.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 100px 220px;
+  justify-items: center;
+  align-items: center;
+}
+.gallery img {
+  border-radius: 5px;
+}
+.G-Details {
+  position: relative;
+}
+.hoverGallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(29, 30, 30, 0.2);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.hoverGallery i {
+  font-size: 26px;
+  color: #55f2b7;
+}
+
+.G-Details:hover .hoverGallery {
+  opacity: 1;
+  height: 100%;
+}
+/****************
+    CONTACT
+****************/
+.contact {
+  background-color: #181818;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.contact-form {
+  width: 90%;
+  background-color: #181818;
+  padding: 30px 90px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.contact-form h1 {
+  color: #Fff;
+  font-size: 46px;
+}
+.contact-form p {
+  color: #8c8c94;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 20px);
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+}
+.contact-form input {
+  height: 45px;
+}
+.contact-form .msg {
+  height: 130px;
+  resize: none;
+}
+.contact-form .btnSend {
+  padding: 15px 60px;
+  background-color: #55f2b7;
+  color: #1d1e1e;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.contact-form .btnSend:hover {
+  background-color: rgba(85, 242, 183, 0.7);
+}
+
+.contact-social {
+  width: 10%;
+  background-color: #55f2b7;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.contact-social a {
+  text-decoration: none;
+  color: #181818;
+}
+.contact-social i {
+  font-size: 18px;
+}
+.contact-info {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 30%;
+  background-color: #1d1e1e;
+}
+.contact-info h2 {
+  padding: 20px;
+  font-size: 34px;
+  color: #fff;
+}
+.contact-info .contact-details {
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact-details i {
+  font-size: 26px;
+  color: #55f2b7;
+  margin: 10px;
+}
+.contact-details span {
+  font-size: 14px;
+  color: #8c8c94;
 }
 /****************
     FOOTER
 ****************/
 .footer {
-  background-color: #181818;
+  background-color: #141515;
+  height: auto;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #55f2b7;
+}
+.footer a:any-link {
+  color: #55f2b7;
 }

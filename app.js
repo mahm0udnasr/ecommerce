@@ -38,3 +38,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
     }
 });
 
+window.addEventListener("scroll", ()=> {
+    const stickyNav = document.querySelector("nav");
+    stickyNav.classList.toggle("sticky", window.scrollY > 0);
+})
