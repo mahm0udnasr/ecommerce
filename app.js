@@ -23,8 +23,6 @@ prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
 setInterval(nextSlide, 3000);
 
-
-// search
 document.getElementById('searchInput').addEventListener('input', function() {
     let filter = this.value;
     let product = document.querySelectorAll('.product');
@@ -54,21 +52,11 @@ openCart.onclick = ()=> {
     }
 }
 
-/**
-    *Shopping Cart
-        * get data from proudct 
-        * send data for localstorage 
-        * show data in shopping cart 
-        * on click delete icon  - delete the product from local storage
-        * get sum in totalPrice text
- */
-
-
 const addToCartButtons = document.querySelectorAll('.addCart');
 addToCartButtons.forEach(button => {
     button.addEventListener('click', addToCart);
 });
-loadCart();
+displayCart()
 
 
 function addToCart(event) {
@@ -79,10 +67,6 @@ function addToCart(event) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.push({ name: productName, price: productPrice });
     localStorage.setItem('cart', JSON.stringify(cart));
-    displayCart();
-}
-
-function loadCart() {
     displayCart();
 }
 
