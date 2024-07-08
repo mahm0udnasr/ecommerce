@@ -42,3 +42,14 @@ window.addEventListener("scroll", ()=> {
     const stickyNav = document.querySelector("nav");
     stickyNav.classList.toggle("sticky", window.scrollY > 0);
 })
+
+const openCart = document.getElementById('openCart');
+const shopCart = document.getElementById("shopCart");
+
+openCart.onclick = ()=> {
+    if (shopCart.style.display == 'none') {
+        shopCart.style.display = 'block';
+    } else {
+        shopCart.style.display = 'none';
+    }
+}

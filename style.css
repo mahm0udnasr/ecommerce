@@ -25,7 +25,7 @@ nav.sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999999999999;
+  z-index: 999;
 }
 
 .navTop {
@@ -206,7 +206,7 @@ nav.sticky {
 .search {
   align-self: flex-start;
   margin-left: 20px;
-  z-index: 9999;
+  z-index: 99;
   width: 350px;
   height: 60px;
   background-color: #1d1e1e;
@@ -477,4 +477,115 @@ hr {
 }
 .footer a:any-link {
   color: #55f2b7;
+}
+/****************
+  SHOPPINGCART
+****************/
+.shopiingCart {
+  display: none;
+  position: fixed;
+  top: 75px;
+  right: 45px;
+  z-index: 9999;
+  background-color: #141515;
+  width: 350px;
+  height: 450px;
+  border-radius: 5px;
+}
+
+.shopiingCart h1 {
+  color: #Fff;
+  text-align: center;
+  margin: 10px;
+  font-size: 22px;
+}
+
+.savedCart {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  height: 78%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.savedCart::-webkit-scrollbar {
+  width: 0px;
+}
+
+.saveCart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  transition: background-color 0.5s;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.saveCart:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.savepImg {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.savepDetails {
+  color: #fff;
+  margin: 10px auto auto 20px;
+}
+
+.saveTitle {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.savePrice {
+  font-size: 14px;
+  color: #8c8c94;
+  font-weight: 700;
+}
+
+.saveDeleted {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+
+.saveDeleted:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.SumTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.SumTotal .total {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.SumTotal .buyNow {
+  background-color: #55f2b7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.SumTotal .buyNow:hover {
+  background-color: rgba(85, 242, 183, 0.7);
 }
