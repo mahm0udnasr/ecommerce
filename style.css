@@ -320,12 +320,14 @@ hr {
 .gallery {
   background-color: #1d1e1e;
   height: auto;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   padding: 100px 220px;
   justify-items: center;
   align-items: center;
+  margin: auto;
 }
 .gallery img {
   border-radius: 5px;
@@ -361,7 +363,6 @@ hr {
 ****************/
 .contact {
   background-color: #181818;
-  height: 70vh;
   width: 100%;
   display: flex;
   position: relative;
@@ -591,4 +592,209 @@ hr {
 
 .SumTotal .buyNow:hover {
   background-color: rgba(85, 242, 183, 0.7);
+}
+/****************
+  MEDIAQUEARY
+****************/
+@media (max-width: 1024px) {
+  .sliderImg {
+    width: auto;
+    height: 400px;
+  }
+  
+  .sliderTitle {
+    font-size: 40px;
+  }
+  
+  .sliderPrice {
+    font-size: 25px;
+  }
+  .buyButton {
+    padding: 10px 15px;
+  }
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 100px;
+  }
+  .contact {
+    height: auto;
+  }
+  .contact-form {
+    width: 80%;
+  }
+  .contact-form h1 {
+    font-size: 36px;
+  }
+  .contact-form p {
+    font-size: 12px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: calc(100% - 80px);
+  }
+  .contact-form input {
+    height: 45px;
+  }
+  .contact-form .btnSend {
+    padding: 10px 40px;
+  }
+  .contact-social {
+    width: 20%;
+  }
+  .contact-info h2 {
+    font-size: 34px;
+  }
+  .contact-details i {
+    font-size: 22px;
+  }
+  .contact-details span {
+    font-size: 12px;
+  }
+  .footer {
+    font-size: 14px;
+  }
+  .shopiingCart {
+    display: none;
+    position: fixed;
+    top: 75px;
+    right: 45px;
+    z-index: 9999;
+    background-color: #141515;
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+  }
+  .savedCart {
+    height: 75%;
+  }
+  .saveTitle {
+    font-size: 14px;
+  }
+  .savePrice {
+    font-size: 12px;
+  }
+  .saveDeleted {
+    font-size: 18px;
+  }
+  .SumTotal {
+    height: 10%;
+  }
+  .SumTotal .total {
+    font-size: 16px;
+  }
+  .SumTotal .buyNow {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .gallery {
+    padding: 100px 40px;
+  }
+}
+@media (max-width: 810px) {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 590px) {
+  .slider {
+    height: auto;
+  }
+  .sliderImg {
+    height: 250px;
+  }
+  .sliderTitle {
+    font-size: 28px;
+  }
+  .sliderPrice {
+    font-size: 18px;
+  }
+  .buyButton {
+    padding: 5px 15px;
+    font-size: 12px;
+  }
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .contact-form {
+    width: 100%;
+    padding: 10px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+  .contact-form .btnSend {
+    width: 100px;
+  }
+  .contact-social {
+    width: 100%;
+  }
+  .contact-info {
+    display: none;
+  }
+}
+@media (max-width: 525px) {
+  .navTop {
+    padding: 15px 20px;
+  }
+  .shopiingCart {
+    top: 75px;
+    right: 20px;
+  }
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 375px) {
+  .slider {
+    padding: 20px 0;
+  }
+  .prev,
+  .next {
+    font-size: 14px;
+  }
+  .sliderImg {
+    height: 150px;
+  }
+  .sliderTitle {
+    font-size: 18px;
+  }
+  .sliderPrice {
+    font-size: 14px;
+  }
+  .buyButton {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .features {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .search {
+    width: 80%;
+    margin: auto;
+  }
+  .footer {
+    font-size: 12px;
+  }
+  .shopiingCart {
+    width: 250px;
+  }
 }
